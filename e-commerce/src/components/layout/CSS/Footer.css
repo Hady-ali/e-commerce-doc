@@ -1,0 +1,276 @@
+/* Footer Base Styles */
+.creative-footer {
+  /* background: linear-gradient(135deg, #2c3e50, #1a252f); */
+  background-color: #16162a;
+  color: #ecf0f1;
+  padding: 40px 0 0;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  /* margin-top: 30px; */
+  padding-top: 30px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Footer Sections */
+.footer-section {
+  padding: 20px;
+  position: relative;
+}
+
+.section-title {
+  color: #f7cc4d;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #f7cc4d;
+}
+.prg {
+    padding-bottom: 15px;
+} 
+
+/* About Section */
+.about-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.logo-main {
+  color: #ecf0f1;
+}
+
+.logo-accent {
+  color: #f7cc4d;
+}
+
+.footer-about {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #bdc3c7;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: #bdc3c7;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #f7cc4d;
+  transform: translateY(-3px);
+}
+
+/* Links Section */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 15px;
+}
+
+.footer-links a::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #f7cc4d;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f7cc4d;
+  padding-left: 20px;
+}
+
+.footer-links a:hover::before {
+  opacity: 1;
+}
+
+/* Contact Section */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #bdc3c7;
+}
+
+.contact-icon {
+  color: #f7cc4d;
+  font-size: 1.2rem;
+  margin-top: 3px;
+}
+
+.contact-item a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #f7cc4d;
+}
+
+/* Newsletter Section */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form input:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.newsletter-form input::placeholder {
+  color: #bdc3c7;
+}
+
+.newsletter-form button {
+  padding: 12px 15px;
+  background: #f7cc4d;
+  color: #2c3e50;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #e6b800;
+  transform: translateY(-2px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.copyright {
+  color: #bdc3c7;
+  margin-bottom: 10px;
+}
+
+.payment-icon {
+  display: inline-block;
+  width: 40px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.payment-icon:hover {
+  opacity: 1;
+}
+
+.payment-icon.visa {
+  background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visa/visa-original.svg");
+}
+
+.payment-icon.mastercard {
+  background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mastercard/mastercard-original.svg");
+}
+
+.payment-icon.paypal {
+  background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/paypal/paypal-original.svg");
+}
+
+.payment-icon.applepay {
+  background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg");
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .footer-links a {
+    padding-left: 0;
+  }
+
+  .footer-links a::before {
+    display: none;
+  }
+
+  .footer-links a:hover {
+    padding-left: 0;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+}

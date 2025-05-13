@@ -1,0 +1,290 @@
+
+/* ___________________________________________ */
+
+.banner-container {
+  position: relative;
+  height: 75vh;
+  min-height: 500px;
+  margin: 60px 0 20px;
+  overflow: hidden;
+  background: linear-gradient(276deg, #2c3e50, #1a252f);
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 500px;
+}
+
+.slide-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 600px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  animation: fadeIn 1s ease;
+}
+
+
+.offer-tag {
+  background-color: #f1e943;
+  color: #16162A;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.slide-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.slide-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.banner-btn {
+  background-color: #f1e943;
+  color: #16162A;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.banner-btn:hover {
+  background-color: #16162A;
+  color: #f1e943;
+  transform: translateY(-2px);
+}
+
+/* تنسيق الأسهم */
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s;
+}
+
+.slick-arrow:hover {
+  background-color: rgba(255,255,255,0.4);
+}
+
+.prev-arrow {
+  left: 30px;
+}
+
+.next-arrow {
+  right: 30px;
+}
+
+/* تنسيق للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .banner-container, .slide {
+    height: 50vh;
+    min-height: 300px;
+  }
+  
+  .slide-content {
+    left: 5%;
+    max-width: 90%;
+  }
+  
+  .slide-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .slide-content p {
+    font-size: 1rem;
+  }
+  
+  .slick-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+
+/* _____________________________ */
+/* img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+@media (min-width: 1536px) {
+  .con {
+    height: 70vh !important;
+  }
+} */
+
+
+
+
+.banner-container {
+  height: 70vh; /* Taller banner */
+  min-height: 500px;
+  margin: 60px 0 20px;
+  position: relative;
+  background-color: #38425c;
+  background: linear-gradient(276deg, #2c3e50, #1a252f);
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 500px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.offer-tag {
+  background-color: #f1e943;
+  color: #16162A;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.slide-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.slide-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.slide-content button {
+  background-color: #f1e943;
+  color: #16162A;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.slide-content button:hover {
+  background-color: #16162A;
+  color: #f1e943;
+  transform: translateY(-2px);
+}
+
+/* Custom arrow styling */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s;
+}
+
+.arrow:hover {
+  background-color: rgba(255,255,255,0.4);
+}
+
+.arrow.left {
+  left: 30px;
+}
+
+.arrow.right {
+  right: 30px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-40%); }
+  to { opacity: 1; transform: translateY(-50%); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .banner-container {
+    height: 50vh;
+    min-height: 300px;
+  }
+  
+  .slide-content {
+    left: 5%;
+    max-width: 90%;
+  }
+  
+  .slide-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .slide-content p {
+    font-size: 1rem;
+  }
+  
+  .arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+

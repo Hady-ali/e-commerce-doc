@@ -1,0 +1,214 @@
+
+
+
+
+
+
+
+
+
+/* _______________________ */
+
+.banner-container {
+  position: relative;
+  height: 75vh;
+  min-height: 500px;
+  margin: 60px 0 20px;
+  overflow: hidden;
+  background: linear-gradient(276deg, #2c3e50, #1a252f);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+}
+
+.slide-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.8);
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 600px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  animation: fadeIn 1s ease;
+}
+
+
+
+.slide-content.dark-theme {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+}
+
+.offer-tag {
+  background-color: #f1e943;
+  color: #16162A;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.slide-content h1, 
+.slide-content h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.slide-content p {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.banner-btn {
+  background-color: #f1e943;
+  color: #16162A;
+  border: none;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.banner-btn:hover {
+  background-color: #16162A;
+  color: #f1e943;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.banner-features {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.banner-features span {
+  background: rgba(255,255,255,0.2);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  backdrop-filter: blur(5px);
+}
+
+/* تنسيق الأسهم */
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+.slick-arrow:hover {
+  background-color: rgba(255,255,255,0.4);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev-arrow {
+  left: 30px;
+}
+
+.next-arrow {
+  right: 30px;
+}
+
+/* تأثيرات الحركة */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-40%); }
+  to { opacity: 1; transform: translateY(-50%); }
+}
+
+/* تنسيق للشاشات الصغيرة */
+@media (max-width: 992px) {
+  .banner-container, .slide {
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  .slide-content {
+    left: 5%;
+    max-width: 90%;
+  }
+  
+  .slide-content h1,
+  .slide-content h2 {
+    font-size: 2.2rem;
+  }
+  
+  .slide-content p {
+    font-size: 1.1rem;
+  }
+  
+  .banner-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+  
+  .slick-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-container, .slide {
+    height: 50vh;
+    min-height: 300px;
+  }
+  
+  .slide-content h1,
+  .slide-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .offer-tag {
+    font-size: 1rem;
+    padding: 5px 15px;
+  }
+  
+  .banner-features {
+    margin-top: 15px;
+    gap: 10px;
+  }
+  
+  .banner-features span {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}
